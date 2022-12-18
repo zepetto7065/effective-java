@@ -17,7 +17,13 @@ public class PointAndDimention
         point.y = 2;
 
         point.setLocation(3,2);
-
+        point.x = 6;
         System.out.println(point.x);
+
+        String abs = "test";
+        String abs2 = abs + "test2";
+
+        StringBuilder builder = new StringBuilder("test");
+        builder.append("test2");
     }
 }

@@ -38,5 +38,9 @@ public class DeepCloning {
 
         System.out.println("a : " + a);
         System.out.println("b : "+ b);
+
+        Fee fee = new Fee(2L, 3L);
+
+
     }
 }

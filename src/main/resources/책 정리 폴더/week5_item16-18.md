@@ -1,4 +1,4 @@
-## item14. public 클래스에서는 public 필드가 아닌 접근자 메서드를 사용하라.
+## item16. public 클래스에서는 public 필드가 아닌 접근자 메서드를 사용하라.
 
 - 퇴보한 클래스
 - 필드 직접 접근 가능
@@ -22,9 +22,9 @@ class Point {
 
 <hr>
 
-## item15. 변경 가능성을 최소화하라.
+## item17. 변경 가능성을 최소화하라.
 
-- 불편클래스? 내부 값을 수정할 수 없는 클래스 ( ex. String, BigInteger, BigDecimal )
+- 불변클래스? 내부 값을 수정할 수 없는 클래스 ( ex. String, BigInteger, BigDecimal )
     - 5가지 규칙
         - 객체의 상태를 변경하는 메서드(변경자)를 제공하지 않는다.
         - 클래스를 확장할 수 없도록 한다.
@@ -122,6 +122,8 @@ public final class Complex {
   }
   ```
 ### [불편 클래스의 설계 방법]
+@Value
+
 1. 모든 생성자를 private 혹은 package-private으로 만들고 public 정적 메서드 제공
    ```java
     //코드 17-1
@@ -174,7 +176,7 @@ public final class Complex {
 ### 대안-컴포지션
 - 컴포지션? 기존 클래스가 새로운 클래스의 구성요소로 쓰인다
 - 기본 확장 대신 대응하는 클래스 호출로 확장하자 
-  - forwarding 
+  - forwarding  
   - forwarding method
 
 - 래퍼 클래스 (forwarding 받은 , InstrumentedSet)
@@ -196,3 +198,4 @@ public final class Complex {
 - 상속은 캡슐화를 해친다.
 - is-a 일때만 사용하자
 - 상속의 취약점을 피하려면 컴포지션을 사용하자
+
